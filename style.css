@@ -581,3 +581,95 @@ main .recent-orders a {
         display: none;
     }
 }
+
+/* === media queries === */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    aside {
+        position: fixed;
+        left: 0;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+    }
+
+    aside .logo {
+        margin-left: 1rem;
+    }
+
+    aside .logo h2 {
+        display: inline;
+    }
+
+    aside .sidebar h3 {
+        display: inline;
+    }
+
+    aside .sidebar a:last-child {
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .close {
+        display: flex;
+        cursor: pointer;
+    }
+
+    main {
+        margin-top: 8rem;
+    }
+
+    main .recent-orders {
+        width: 100%;
+        position: relative;
+        right: 0;
+        left: 0;
+    }
+
+    .right {
+        margin-top: 0;
+    }
+
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: var(--color-white);
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+    }
+
+    .right .top button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 0.8rem;
+    }
+
+    .right .top button span {
+        font-size: 2rem;
+    }
+
+    .right .profile .info {
+        display: none;
+    }
+
+    .right .recent-updates {
+        margin-top: 0;
+    }
+}
